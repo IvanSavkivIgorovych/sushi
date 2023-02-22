@@ -145,6 +145,7 @@ table {
   display: flex;
   align-items: center;
   flex: 1;
+  cursor: pointer;
 }
 .header_telephone {
   justify-content: flex-end;
@@ -154,6 +155,10 @@ table {
   display: flex;
   justify-content: space-between;
   border: 1px solid #2a2b2d;
+}
+.header_bottom nav {
+  display: flex;
+  align-items: center;
 }
 .header_menu {
   display: flex;
@@ -171,6 +176,29 @@ table {
   align-items: center;
   gap: 0 15px;
   justify-content: flex-end;
+}
+.header_link {
+  position: relative;
+}
+.header_link::after {
+  position: absolute;
+  opacity: 0;
+  content: "";
+  height: 1px;
+  bottom: -13px;
+  margin: 0 0;
+  margin-left: -10%;
+  left: 0;
+  right: 0;
+  width: 120%;
+  background: #d9d9d9;
+  transition: 0.5s;
+}
+.header_link:hover:after {
+  width: 130%;
+}
+.header_link:hover::after {
+  opacity: 1;
 }
 
 * {
