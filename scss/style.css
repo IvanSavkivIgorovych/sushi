@@ -1,0 +1,195 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.header_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 24px;
+  font-size: 14px;
+  line-height: 24px;
+  background-color: #2a2b2d;
+}
+.header_top img {
+  margin-right: 12px;
+}
+.header_location, .header_telephone {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.header_telephone {
+  justify-content: flex-end;
+}
+.header_bottom {
+  padding: 34px 24px 0;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #2a2b2d;
+}
+.header_menu {
+  display: flex;
+  gap: 0 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+.header_logo, .header_account {
+  flex: 1;
+  font-size: 0;
+}
+.header_account {
+  display: flex;
+  align-items: center;
+  gap: 0 15px;
+  justify-content: flex-end;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 400;
+  background-color: #1c1e21;
+  color: #d6cfca;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}/*# sourceMappingURL=style.css.map */

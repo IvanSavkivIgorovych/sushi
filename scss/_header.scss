@@ -1,0 +1,54 @@
+.header {
+  &_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 24px;
+    font-size: 14px;
+    line-height: 24px;
+    background-color: #2a2b2d;
+
+    img {
+      margin-right: 12px;
+    }
+  }
+
+  &_location,
+  &_telephone {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+
+  &_telephone {
+    justify-content: flex-end;
+  }
+
+  &_bottom {
+    padding: 34px 24px 0;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #2a2b2d;
+  }
+
+  &_menu {
+    display: flex;
+    gap: 0 30px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &_logo,
+  &_account {
+    flex: 1;
+    font-size: 0;
+  }
+
+  &_account {
+    display: flex;
+    align-items: center;
+    gap: 0 15px;
+    justify-content: flex-end;
+  }
+}
