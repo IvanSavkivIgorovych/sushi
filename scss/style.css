@@ -218,7 +218,7 @@ table {
   bottom: 5px;
 }
 .banner .slick-dots li.slick-active button:before {
-  color: transparent;
+  filter: brightness(85%);
 }
 .banner .slick-list {
   border-radius: 20px;
