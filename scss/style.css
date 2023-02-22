@@ -274,6 +274,27 @@ table {
   color: #ff9b74;
 }
 
+.footer {
+  padding: 26px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2a2b2d;
+}
+.footer_nav {
+  line-height: 20px;
+}
+.footer_nav li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer_nav.contacts a {
+  display: flex;
+  align-items: center;
+}
+.footer_nav.contacts img {
+  margin-right: 15px;
+}
+
 * {
   box-sizing: border-box;
 }

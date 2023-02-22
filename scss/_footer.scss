@@ -1,0 +1,25 @@
+.footer {
+  padding: 26px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2a2b2d;
+
+  &_nav {
+    line-height: 20px;
+    li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &.contacts {
+      a {
+        display: flex;
+        align-items: center;
+      }
+
+      img {
+        margin-right: 15px;
+      }
+    }
+  }
+}
