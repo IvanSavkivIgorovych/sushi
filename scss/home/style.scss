@@ -1,8 +1,8 @@
-@import "reset";
-@import "header";
+@import "../reset";
+@import "../header";
 @import "banner";
 @import "menu";
-@import "footer";
+@import "../footer";
 
 * {
   box-sizing: border-box;

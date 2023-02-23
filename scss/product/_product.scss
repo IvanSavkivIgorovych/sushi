@@ -1,0 +1,132 @@
+.product_breadcrumbs {
+  a {
+    line-height: 20px;
+    color: rgba(214, 207, 202, 0.5);
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+
+    li {
+      position: relative;
+
+      &:not(:last-child)::after {
+        content: "";
+        width: 15px;
+        height: 20px;
+        position: absolute;
+        right: -35px;
+        background: url(../../assets/images/breadcrumb.svg) center center
+          no-repeat;
+      }
+    }
+  }
+
+  margin-bottom: 70px;
+}
+
+.product {
+  &_info {
+    display: flex;
+    align-items: center;
+    column-gap: calc(1 / 12 * 100%);
+  }
+
+  &_img {
+    position: relative;
+    min-width: 457px;
+    min-height: 475px;
+    background: url(../../assets/images/product_item.png) center center
+      no-repeat;
+    border: 1px solid rgba(214, 207, 202, 0.5);
+    border-radius: 10px;
+
+    a {
+      position: absolute;
+      top: 28px;
+      right: 28px;
+      font-size: 0;
+    }
+  }
+
+  &_description {
+    h2 {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 25px;
+      margin-bottom: 35px;
+    }
+
+    p {
+      line-height: 20px;
+
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+
+      &:last-of-type {
+        margin-bottom: 90px;
+      }
+    }
+
+    .cart {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: #2a2b2d;
+      border-radius: 10px;
+      image.png &_ammount {
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: -8px;
+          right: 30px;
+          width: 30px;
+          height: 30px;
+          background: url(../../assets/images/leftArrow.svg) center center
+            no-repeat;
+          cursor: pointer;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: -8px;
+          left: 30px;
+          width: 30px;
+          height: 30px;
+          background: url(../../assets/images/rightArrow.svg) center center
+            no-repeat;
+          cursor: pointer;
+        }
+      }
+
+      &_price {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      &_add {
+        button {
+          padding: 10px 20px;
+          background-color: transparent;
+          border: 1px solid #ff9b74;
+          border-radius: 10px;
+          font-family: "Gothic A1";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 25px;
+          color: #ff9b74;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
