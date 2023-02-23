@@ -262,10 +262,15 @@ table {
   background: #27292d;
   border-radius: 20px;
   cursor: pointer;
+  border: 1px solid transparent;
+  transition: border ease-in-out 0.5s;
 }
 .menu_item img {
   border-radius: 15px;
   margin-bottom: 30px;
+}
+.menu_item:hover {
+  border: 1px solid #ff9b74;
 }
 .menu figcaption {
   font-weight: 500;
@@ -285,14 +290,19 @@ table {
   line-height: 20px;
 }
 .footer_nav li:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 22px;
 }
 .footer_nav.contacts a {
   display: flex;
   align-items: center;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
 }
-.footer_nav.contacts img {
-  margin-right: 15px;
+.footer_socials {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  font-size: 0;
 }
 
 * {

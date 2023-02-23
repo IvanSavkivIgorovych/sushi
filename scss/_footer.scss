@@ -8,18 +8,21 @@
   &_nav {
     line-height: 20px;
     li:not(:last-child) {
-      margin-bottom: 10px;
+      margin-bottom: 22px;
     }
 
     &.contacts {
       a {
         display: flex;
         align-items: center;
-      }
-
-      img {
-        margin-right: 15px;
+        column-gap: 15px;
       }
     }
+  }
+
+  &_socials {
+    display: flex;
+    column-gap: 20px;
+    font-size: 0;
   }
 }

@@ -19,10 +19,16 @@
     background: #27292d;
     border-radius: 20px;
     cursor: pointer;
+    border: 1px solid transparent;
+    transition: border ease-in-out 0.5s;
 
     img {
       border-radius: 15px;
       margin-bottom: 30px;
+    }
+
+    &:hover {
+      border: 1px solid #ff9b74;
     }
   }
 
