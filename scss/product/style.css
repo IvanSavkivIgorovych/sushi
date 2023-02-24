@@ -236,6 +236,7 @@ table {
   align-items: center;
   -moz-column-gap: 8.3333333333%;
        column-gap: 8.3333333333%;
+  margin-bottom: 80px;
 }
 .product_img {
   position: relative;
@@ -274,10 +275,10 @@ table {
   background: #2a2b2d;
   border-radius: 10px;
 }
-image.png .product_description .cart_ammount {
+.product_description .cart_ammount {
   position: relative;
 }
-image.png .product_description .cart_ammount::before {
+.product_description .cart_ammount::before {
   content: "";
   position: absolute;
   top: -8px;
@@ -287,7 +288,7 @@ image.png .product_description .cart_ammount::before {
   background: url(../../assets/images/leftArrow.svg) center center no-repeat;
   cursor: pointer;
 }
-image.png .product_description .cart_ammount::after {
+.product_description .cart_ammount::after {
   content: "";
   position: absolute;
   top: -8px;
@@ -314,6 +315,62 @@ image.png .product_description .cart_ammount::after {
   line-height: 25px;
   color: #ff9b74;
   cursor: pointer;
+}
+.product .add_wrapper {
+  max-width: 936px;
+  margin: 0 auto;
+}
+.product .add_wrapper h2 {
+  margin-bottom: 50px;
+  font-size: 20px;
+  line-height: 25px;
+}
+.product_adds {
+  display: flex;
+  display: flex;
+  justify-content: space-between;
+}
+.product_add {
+  background: #27292d;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+  min-width: 168px;
+  color: #ffffff;
+}
+.product_add_img {
+  width: 85px;
+  height: 90px;
+  border: 1px solid #d6cfca;
+  border-radius: 10px;
+  background: url(../../assets/images/product_item.png) center center no-repeat;
+  background-size: 70px;
+}
+.product_add h3 {
+  font-size: 14px;
+  line-height: 18px;
+}
+.product_add_add {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+}
+.product_add_price {
+  font-size: 12px;
+  line-height: 15px;
+}
+.product_add_button button {
+  font-size: 12px;
+  line-height: 15px;
+  color: #ff9b74;
+  background-color: transparent;
+  border: 1px solid #ff9b74;
+  border-radius: 5px;
+  padding: 5px 20px;
 }
 
 .footer {
@@ -359,7 +416,7 @@ a {
 }
 
 main {
-  padding: 60px 24px 612px;
+  padding: 60px 24px 154px;
 }
 
 main .container {
