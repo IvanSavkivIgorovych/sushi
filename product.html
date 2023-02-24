@@ -105,7 +105,21 @@
           <div class="product_info">
             <div class="product_img">
               <a href="javascript:void(0)">
-                <img src="assets/images/wish.svg" width="25" alt="Wish" />
+                <!-- <img src="assets/images/wish.svg" width="25" alt="Wish" /> -->
+                <svg
+                  width="22"
+                  height="20"
+                  viewBox="0 0 22 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21.2156 6.86212C21.219 8.40087 20.6262 9.88112 19.5616 10.9921C17.1206 13.5231 14.7526 16.1621 12.2216 18.6001C11.6406 19.1501 10.7196 19.1301 10.1646 18.5551L2.86957 10.9931C0.66457 8.70712 0.66457 5.01712 2.86957 2.73212C3.39071 2.18512 4.01751 1.74964 4.71196 1.4521C5.40641 1.15455 6.15406 1.00112 6.90957 1.00112C7.66508 1.00112 8.41273 1.15455 9.10718 1.4521C9.80163 1.74964 10.4284 2.18512 10.9496 2.73212L11.2156 3.00612L11.4806 2.73212C12.0028 2.18642 12.6297 1.75174 13.3239 1.45413C14.0181 1.15651 14.7653 1.0021 15.5206 1.00012C17.0406 1.00012 18.4936 1.62412 19.5606 2.73212C20.6256 3.84297 21.2187 5.32323 21.2156 6.86212Z"
+                    stroke="#D6CFCA"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                </svg>
               </a>
             </div>
 
@@ -119,7 +133,11 @@
               <p>Алергени: vel eget</p>
 
               <div class="cart">
-                <div class="cart_ammount">1</div>
+                <div class="cart_ammount">
+                  <span class="cart_decrease"></span>
+                  <input type="number" id="quantity" value="1" />
+                  <span class="cart_increase"></span>
+                </div>
                 <div class="cart_price">98 zl</div>
                 <div class="cart_add">
                   <button type="button">Dodaj do koszyka</button>
@@ -257,5 +275,24 @@
         </ul>
       </div>
     </footer>
+    <script>
+      const quantityInput = document.querySelector("#quantity");
+      const increaseBtn = document.querySelector(".cart_increase");
+      const decreaseBtn = document.querySelector(".cart_decrease");
+
+      increaseBtn.addEventListener("click", function () {
+        let value = parseInt(quantityInput.value);
+        value = isNaN(value) ? 1 : value;
+        value += 1;
+        quantityInput.value = value;
+      });
+
+      decreaseBtn.addEventListener("click", function () {
+        let value = parseInt(quantityInput.value);
+        value = isNaN(value) ? 1 : value;
+        value = value < 2 ? 1 : value - 1;
+        quantityInput.value = value;
+      });
+    </script>
   </body>
 </html>

@@ -252,6 +252,9 @@ table {
   right: 28px;
   font-size: 0;
 }
+.product_img a svg:hover {
+  fill: #ff9b74;
+}
 .product_description h2 {
   font-weight: 500;
   font-size: 20px;
@@ -276,27 +279,27 @@ table {
   border-radius: 10px;
 }
 .product_description .cart_ammount {
-  position: relative;
+  display: flex;
 }
-.product_description .cart_ammount::before {
-  content: "";
-  position: absolute;
-  top: -8px;
-  right: 30px;
-  width: 30px;
-  height: 30px;
-  background: url(../../assets/images/leftArrow.svg) center center no-repeat;
-  cursor: pointer;
+.product_description .cart_ammount #quantity {
+  width: 40px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  line-height: 24px;
+  color: #d6cfca;
+  text-align: center;
 }
-.product_description .cart_ammount::after {
-  content: "";
-  position: absolute;
-  top: -8px;
-  left: 30px;
-  width: 30px;
-  height: 30px;
-  background: url(../../assets/images/rightArrow.svg) center center no-repeat;
-  cursor: pointer;
+.product_description .cart_ammount input[type=number]::-webkit-inner-spin-button, .product_description .cart_ammount input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.product_description .cart_ammount input[type=number]::-moz-number-spin-up, .product_description .cart_ammount input[type=number]::-moz-number-spin-down {
+  display: none;
+}
+.product_description .cart_ammount input[type=number]::-ms-clear, .product_description .cart_ammount input[type=number]::-ms-reveal {
+  display: none;
 }
 .product_description .cart_price {
   font-weight: 600;
@@ -314,6 +317,18 @@ table {
   font-size: 20px;
   line-height: 25px;
   color: #ff9b74;
+  cursor: pointer;
+}
+.product_description .cart_decrease {
+  width: 30px;
+  height: 30px;
+  background: url(../../assets/images/leftArrow.svg) center center no-repeat;
+  cursor: pointer;
+}
+.product_description .cart_increase {
+  width: 30px;
+  height: 30px;
+  background: url(../../assets/images/rightArrow.svg) center center no-repeat;
   cursor: pointer;
 }
 .product .add_wrapper {
@@ -371,6 +386,12 @@ table {
   border: 1px solid #ff9b74;
   border-radius: 5px;
   padding: 5px 20px;
+  cursor: pointer;
+}
+.product button:hover {
+  transition: color, background-color ease-in-out 0.2s;
+  color: #d6cfca;
+  background-color: #ff9b74;
 }
 
 .footer {
