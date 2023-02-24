@@ -129,6 +129,11 @@ table {
   border-spacing: 0;
 }
 
+.header {
+  z-index: 1;
+  position: sticky;
+  top: 0px;
+}
 .header .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -159,6 +164,7 @@ table {
   display: flex;
   justify-content: space-between;
   border: 1px solid #2a2b2d;
+  background-color: #1c1e21;
 }
 .header_bottom nav {
   display: flex;

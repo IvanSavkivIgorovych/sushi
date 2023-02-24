@@ -105,7 +105,6 @@
           <div class="product_info">
             <div class="product_img">
               <a href="javascript:void(0)">
-                <!-- <img src="assets/images/wish.svg" width="25" alt="Wish" /> -->
                 <svg
                   width="22"
                   height="20"
@@ -275,24 +274,6 @@
         </ul>
       </div>
     </footer>
-    <script>
-      const quantityInput = document.querySelector("#quantity");
-      const increaseBtn = document.querySelector(".cart_increase");
-      const decreaseBtn = document.querySelector(".cart_decrease");
-
-      increaseBtn.addEventListener("click", function () {
-        let value = parseInt(quantityInput.value);
-        value = isNaN(value) ? 1 : value;
-        value += 1;
-        quantityInput.value = value;
-      });
-
-      decreaseBtn.addEventListener("click", function () {
-        let value = parseInt(quantityInput.value);
-        value = isNaN(value) ? 1 : value;
-        value = value < 2 ? 1 : value - 1;
-        quantityInput.value = value;
-      });
-    </script>
+    <script src="./js/product.js"></script>
   </body>
 </html>
