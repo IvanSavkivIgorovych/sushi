@@ -2,12 +2,15 @@
 const quantityInput = document.querySelector("#quantity");
 const increaseBtn = document.querySelector(".cart_increase");
 const decreaseBtn = document.querySelector(".cart_decrease");
+const totalPrice = document.querySelector("#price");
+const price = 98;
 
 increaseBtn.addEventListener("click", function () {
   let value = parseInt(quantityInput.value);
   value = isNaN(value) ? 1 : value;
   value += 1;
   quantityInput.value = value;
+  totalPrice.innerHTML = value * price;
 });
 
 decreaseBtn.addEventListener("click", function () {
@@ -15,6 +18,7 @@ decreaseBtn.addEventListener("click", function () {
   value = isNaN(value) ? 1 : value;
   value = value < 2 ? 1 : value - 1;
   quantityInput.value = value;
+  totalPrice.innerHTML = value * price;
 });
 
 //for popup window
