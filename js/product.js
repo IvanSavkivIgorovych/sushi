@@ -21,6 +21,16 @@ decreaseBtn.addEventListener("click", function () {
   totalPrice.innerHTML = value * price;
 });
 
+quantityInput.addEventListener("input", () => {
+  const quantity = parseInt(quantityInput.value);
+
+  if (Number.isInteger(quantity) && quantity >= 1 && quantity <= 99) {
+    totalPrice.textContent = quantity * price;
+  } else {
+    quantityInput.value = "";
+  }
+});
+
 //for popup window
 const addToCartBtn = document.querySelector("#addToCartBtn");
 const cartPopup = document.querySelector("#cartPopup");
