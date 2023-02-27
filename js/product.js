@@ -22,12 +22,14 @@ const addToCartBtn = document.querySelector("#addToCartBtn");
 const cartPopup = document.querySelector("#cartPopup");
 
 addToCartBtn.addEventListener("click", function () {
-  addToCartBtn.innerHTML = "&#10003;";
+  addToCartBtn.innerHTML = "";
+  addToCartBtn.classList.add("done");
 
   cartPopup.classList.add("show");
 
   setTimeout(function () {
     cartPopup.classList.remove("show");
+    addToCartBtn.classList.remove("done");
     addToCartBtn.innerHTML = "Dodaj do koszyka";
   }, 5000);
 });
