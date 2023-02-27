@@ -80,6 +80,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
       padding: 20px 60px;
       background: #2a2b2d;
       border-radius: 10px;
@@ -124,6 +125,7 @@
 
       &_add {
         button {
+          min-width: 200px;
           padding: 10px 20px;
           background-color: transparent;
           border: 1px solid #ff9b74;
@@ -152,6 +154,49 @@
         background: url(../../assets/images/rightArrow.svg) center center
           no-repeat;
         cursor: pointer;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+
+      .popup {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translateY(calc(100% + 3px));
+        background: rgba(37, 38, 41, 0.9);
+        border-radius: 10px;
+        padding: 20px;
+        display: none;
+
+        p:not(:last-of-type) {
+          margin-bottom: 22px;
+        }
+
+        p > a {
+          color: #ff9b74;
+          position: relative;
+
+          &::after {
+            position: absolute;
+            content: "";
+            height: 1px;
+            bottom: -13px;
+            margin: 0 0;
+            margin-left: -10%;
+            left: 0;
+            right: 0;
+            width: 120%;
+            background: #ff9b74;
+          }
+        }
+      }
+
+      .popup.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
     }
   }

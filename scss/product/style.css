@@ -280,6 +280,7 @@ table {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   padding: 20px 60px;
   background: #2a2b2d;
   border-radius: 10px;
@@ -313,6 +314,7 @@ table {
   line-height: 24px;
 }
 .product_description .cart_add button {
+  min-width: 200px;
   padding: 10px 20px;
   background-color: transparent;
   border: 1px solid #ff9b74;
@@ -336,6 +338,43 @@ table {
   height: 30px;
   background: url(../../assets/images/rightArrow.svg) center center no-repeat;
   cursor: pointer;
+}
+.product_description .cart p {
+  margin-bottom: 0;
+}
+.product_description .cart .popup {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateY(calc(100% + 3px));
+  background: rgba(37, 38, 41, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  display: none;
+}
+.product_description .cart .popup p:not(:last-of-type) {
+  margin-bottom: 22px;
+}
+.product_description .cart .popup p > a {
+  color: #ff9b74;
+  position: relative;
+}
+.product_description .cart .popup p > a::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  bottom: -13px;
+  margin: 0 0;
+  margin-left: -10%;
+  left: 0;
+  right: 0;
+  width: 120%;
+  background: #ff9b74;
+}
+.product_description .cart .popup.show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .product .add_wrapper {
   max-width: 936px;
