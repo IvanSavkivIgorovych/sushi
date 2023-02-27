@@ -1,9 +1,17 @@
-$(document).ready(function () {
-  $(".single-item").slick({
-    dots: true,
-    infinite: true,
-    speed: 300,
-    autoplay: true,
-    autoplaySpeed: 5000,
-  });
+let swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  loop: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
