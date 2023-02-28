@@ -1,4 +1,5 @@
 const parallax = document.querySelector("#parallax");
+const headerHeight = document.querySelector("header");
 
 // Parallax Effect for DIV 1
 window.addEventListener("scroll", function () {
