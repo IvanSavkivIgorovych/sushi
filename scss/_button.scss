@@ -1,0 +1,16 @@
+button {
+  padding: 10px 20px;
+  border: 1px solid #ff9b74;
+  border-radius: 10px;
+  background: transparent;
+  font-family: "Gothic A1";
+  font-style: normal;
+  color: #ff9b74;
+  cursor: pointer;
+}
+
+button:hover {
+  transition: color, background-color ease-in-out 0.2s;
+  color: #fff7f1;
+  background-color: #ff9b74;
+}

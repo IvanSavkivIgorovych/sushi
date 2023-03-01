@@ -212,6 +212,23 @@ table {
   opacity: 1;
 }
 
+button {
+  padding: 10px 20px;
+  border: 1px solid #ff9b74;
+  border-radius: 10px;
+  background: transparent;
+  font-family: "Gothic A1";
+  font-style: normal;
+  color: #ff9b74;
+  cursor: pointer;
+}
+
+button:hover {
+  transition: color, background-color ease-in-out 0.2s;
+  color: #fff7f1;
+  background-color: #ff9b74;
+}
+
 .banner {
   min-height: 346px;
   background: url(../../assets/images/parallax.jpg) top center no-repeat;
@@ -230,25 +247,29 @@ main.products .items {
   justify-content: space-between;
   align-items: center;
   gap: 24px;
+  flex-wrap: wrap;
 }
 main.products .item {
   background: #27292d;
   border-radius: 20px;
-  padding: 72px 72px 25px;
+  padding: 70px 72px 20px;
   font-weight: 500;
   text-align: center;
 }
 main.products .item_price {
   font-size: 20px;
   line-height: 25px;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 main.products .item figure {
   position: relative;
   margin-bottom: 12px;
 }
+main.products .item figure a {
+  display: inline-block;
+}
 main.products .item figure img {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 main.products .item figure .circle {
   position: absolute;
@@ -261,14 +282,42 @@ main.products .item figure .circle {
   height: 38px;
   border: 1px solid #ff9b74;
   border-radius: 50%;
+  transition: fill, stroke ease-in-out 0.2s;
+}
+main.products .item figure .circle:hover svg {
+  fill: #ff9b74;
+}
+main.products .item figure .circle:hover svg path {
+  stroke: #ff9b74;
 }
 main.products .item button {
-  font-family: "Gothic A1";
-  font-style: normal;
+  min-width: 168px;
+  min-height: 45px;
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-  color: #ff9b74;
+}
+main.products .item.new .new_product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 78px;
+  min-height: 38px;
+  margin: 0 auto;
+  background: #ff9b74;
+  border: 1px solid #ff9b74;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff7f1;
+}
+main.products .item .new_product {
+  display: none;
 }
 
 .product_breadcrumbs {

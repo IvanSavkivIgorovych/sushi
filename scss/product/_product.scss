@@ -127,17 +127,9 @@
         button {
           min-width: 200px;
           min-height: 48px;
-          padding: 10px 20px;
-          background-color: transparent;
-          border: 1px solid #ff9b74;
-          border-radius: 10px;
-          font-family: "Gothic A1";
-          font-style: normal;
           font-weight: 400;
           font-size: 20px;
           line-height: 25px;
-          color: #ff9b74;
-          cursor: pointer;
 
           &.done {
             background: #ff9b74 url(../../assets/images/done.svg) center center
@@ -263,20 +255,9 @@
     }
 
     &_button button {
+      font-weight: 400;
       font-size: 12px;
       line-height: 15px;
-      color: #ff9b74;
-      background-color: transparent;
-      border: 1px solid #ff9b74;
-      border-radius: 5px;
-      padding: 5px 20px;
-      cursor: pointer;
     }
-  }
-
-  button:hover {
-    transition: color, background-color ease-in-out 0.2s;
-    color: #fff7f1;
-    background-color: #ff9b74;
   }
 }
