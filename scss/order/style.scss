@@ -1,0 +1,29 @@
+@import "../reset";
+@import "../header";
+@import "order";
+@import "../footer";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 400;
+  background-color: #1c1e21;
+  color: #d6cfca;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  padding: 70px 24px;
+}
+
+main .container {
+  max-width: 1130px;
+  margin: 0 auto;
+}
