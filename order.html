@@ -111,43 +111,56 @@
                 <fieldset>
                   <legend>Informacje kontaktowe:</legend>
 
-                  <input type="text" name="name" placeholder="Imię*" />
-                  <input
-                    type="tel"
-                    name="telephone"
-                    placeholder="Numer telefonu*"
-                  />
-                  <input type="email" name="email" placeholder="Email*" />
+                  <div class="order_contactInfo">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Imię*"
+                      required
+                    />
+                    <input
+                      type="tel"
+                      name="telephone"
+                      placeholder="Numer telefonu*"
+                      required
+                    />
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email*"
+                      required
+                    />
+                  </div>
                 </fieldset>
 
                 <fieldset>
                   <legend>Adres dostawy:</legend>
 
-                  <input type="checkbox" name="courier" id="courier" />
-                  <label for="courier">Dostawa kurierem</label>
+                  <div class="order_addressType">
+                    <input type="radio" name="courier" id="courier" checked />
+                    <label for="courier">Dostawa kurierem</label>
 
-                  <input
-                    type="checkbox"
-                    name="self_exemption"
-                    id="self_exemption"
-                  />
-                  <label for="self_exemption">Самовивіз</label>
+                    <input type="radio" name="courier" id="self_exemption" />
+                    <label for="self_exemption">Самовивіз</label>
+                  </div>
 
-                  <input type="text" name="street" placeholder="Ulica*" />
-                  <input
-                    type="text"
-                    name="building"
-                    placeholder="Numer budynku*"
-                  />
-                  <input
-                    type="text"
-                    name="number"
-                    placeholder="Numer mieszkanie*"
-                  />
-                  <input type="text" name="zip" placeholder="Zip*" />
+                  <div class="order_address" id="courierBlock">
+                    <input type="text" name="street" placeholder="Ulica*" />
+                    <input
+                      type="text"
+                      name="building"
+                      placeholder="Numer budynku*"
+                    />
+                    <input
+                      type="text"
+                      name="number"
+                      placeholder="Numer mieszkanie*"
+                    />
+                    <input type="text" name="zip" placeholder="Zip*" />
+                  </div>
                 </fieldset>
 
-                <fieldset>
+                <fieldset id="gotop">
                   <legend>Sposób opłaty:</legend>
 
                   <div class="order_type">
@@ -155,7 +168,7 @@
                     <label for="cash">Gotówka</label>
 
                     <input type="radio" name="order_type" id="card" />
-                    <label for="card">Gotówka</label>
+                    <label for="card">Karta</label>
                   </div>
                 </fieldset>
 
@@ -194,9 +207,60 @@
               <div class="order_right">
                 <fieldset>
                   <legend>Twoje zamówienie:</legend>
+
+                  <div class="order_item">
+                    <div class="order_img"></div>
+                    <p class="order_name">Lorem ipsum dolor sit amet</p>
+                    <div class="cart_ammount">
+                      <span class="cart_decrease"></span>
+                      <input type="number" id="quantity" value="2" />
+                      <span class="cart_increase"></span>
+                    </div>
+                    <div class="order_delete">
+                      <img src="assets/images/delete.svg" alt="Delete" />
+                    </div>
+                    <div class="cart_price"><span id="price">196</span> зл</div>
+                  </div>
+
+                  <div class="order_item">
+                    <div class="order_img"></div>
+                    <p class="order_name">Lorem ipsum dolor sit amet</p>
+                    <div class="cart_ammount">
+                      <span class="cart_decrease"></span>
+                      <input type="number" id="quantity2" value="1" />
+                      <span class="cart_increase"></span>
+                    </div>
+                    <div class="order_delete">
+                      <img src="assets/images/delete.svg" alt="Delete" />
+                    </div>
+                    <div class="cart_price">
+                      <span id="price2">198</span> зл
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset>
+                  <div class="order_promocode">
+                    <input type="text" name="promocode" id="promocode" />
+                    <button type="button">Застосувати</button>
+                  </div>
+                </fieldset>
+
+                <fieldset>
+                  <p>Доставка <span>Безкоштовно</span></p>
+                  <p>До оплати <span>262 зл</span></p>
                 </fieldset>
 
                 <button type="submit">Zamawiam</button>
+                <small
+                  >Składając zamówienie, zgadzasz się z naszą
+                  <a
+                    href="https://drive.google.com/file/d/1CUFmKqSA1yER6gqrCYpOGOK_keBnuU3b/view"
+                    target="_blank"
+                    >polityką prywatnościdanych</a
+                  >
+                  osobowych i warunkami dostawy.</small
+                >
               </div>
             </form>
           </div>
@@ -269,5 +333,7 @@
         </ul>
       </div>
     </footer>
+
+    <script src="js/order.js"></script>
   </body>
 </html>

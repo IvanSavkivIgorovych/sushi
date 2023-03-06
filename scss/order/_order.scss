@@ -40,10 +40,138 @@
 
   form {
     display: flex;
+    column-gap: 24px;
   }
 
   &_left,
   &_right {
     flex: 1;
   }
+
+  &_left fieldset:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  legend {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 35px;
+  }
+
+  &_contactInfo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    input:last-child {
+      width: 100%;
+    }
+  }
+
+  input {
+    min-height: 59px;
+    min-width: 264px;
+    padding: 10px 15px;
+    background: #27292d;
+    border-radius: 10px;
+    border: none;
+    border: 1px solid transparent;
+    color: #d6cfca;
+    outline: none;
+
+    &[type="checkbox"],
+    &[type="radio"] {
+      min-height: initial;
+      min-width: initial;
+    }
+
+    &:focus {
+      border: 1px solid rgba(255, 227, 224, 0.2);
+    }
+
+    &::placeholder {
+      font-family: "Gothic A1";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: rgba(255, 227, 224, 0.2);
+    }
+  }
+
+  &_address {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+
+    &.hide {
+      opacity: 0;
+      visibility: hidden;
+      position: relative;
+    }
+
+    &.show {
+      height: initial;
+    }
+  }
+
+  &_addressType {
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
+    margin-bottom: 30px;
+
+    input {
+      padding: 0;
+      height: initial;
+      width: initial;
+      margin-bottom: 0;
+      display: none;
+      cursor: pointer;
+
+      &:checked + label::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 16px;
+        height: 16px;
+        background: url(../../assets/images/check.png) center center no-repeat;
+      }
+    }
+
+    label {
+      position: relative;
+      cursor: pointer;
+
+      &:before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        background: #27292d;
+        border-radius: 5px;
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        cursor: pointer;
+        margin-right: 20px;
+        border: 1px solid transparent;
+      }
+
+      &:hover::before {
+        border: 1px solid rgba(255, 227, 224, 0.2);
+      }
+    }
+  }
+}
+#gotop {
+  transition: all 1s ease-in-out;
 }

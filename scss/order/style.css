@@ -248,9 +248,130 @@ table {
 }
 .order form {
   display: flex;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
 }
 .order_left, .order_right {
   flex: 1;
+}
+.order_left fieldset:not(:last-child) {
+  margin-bottom: 24px;
+}
+.order legend {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 35px;
+}
+.order_contactInfo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.order_contactInfo input:last-child {
+  width: 100%;
+}
+.order input {
+  min-height: 59px;
+  min-width: 264px;
+  padding: 10px 15px;
+  background: #27292d;
+  border-radius: 10px;
+  border: none;
+  border: 1px solid transparent;
+  color: #d6cfca;
+  outline: none;
+}
+.order input[type=checkbox], .order input[type=radio] {
+  min-height: initial;
+  min-width: initial;
+}
+.order input:focus {
+  border: 1px solid rgba(255, 227, 224, 0.2);
+}
+.order input::-moz-placeholder {
+  font-family: "Gothic A1";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 227, 224, 0.2);
+}
+.order input::placeholder {
+  font-family: "Gothic A1";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 227, 224, 0.2);
+}
+.order_address {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+  visibility: visible;
+}
+.order_address.hide {
+  opacity: 0;
+  visibility: hidden;
+  position: relative;
+}
+.order_address.show {
+  height: initial;
+}
+.order_addressType {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+  margin-bottom: 30px;
+}
+.order_addressType input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+.order_addressType input:checked + label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  background: url(../../assets/images/check.png) center center no-repeat;
+}
+.order_addressType label {
+  position: relative;
+  cursor: pointer;
+}
+.order_addressType label:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: #27292d;
+  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 20px;
+  border: 1px solid transparent;
+}
+.order_addressType label:hover::before {
+  border: 1px solid rgba(255, 227, 224, 0.2);
+}
+
+#gotop {
+  transition: all 1s ease-in-out;
 }
 
 .footer {
@@ -302,4 +423,10 @@ main {
 main .container {
   max-width: 1130px;
   margin: 0 auto;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-transition: background-color 600000s 0s, color 600000s 0s;
+  transition: background-color 600000s 0s, color 600000s 0s;
 }/*# sourceMappingURL=style.css.map */
