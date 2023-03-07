@@ -192,6 +192,8 @@
                         <span class="datepicker-toggle-button"></span>
                         <input type="date" class="datepicker-input" />
                       </span>
+
+                      <input type="time" name="time" id="time" />
                     </div>
 
                     <break></break>
@@ -216,62 +218,74 @@
               </div>
 
               <div class="order_right">
-                <fieldset>
+                <fieldset class="order_list">
                   <legend>Twoje zamówienie:</legend>
 
-                  <div class="order_item">
-                    <div class="order_img"></div>
-                    <p class="order_name">Lorem ipsum dolor sit amet</p>
-                    <div class="cart_ammount">
-                      <span class="cart_decrease"></span>
-                      <input type="number" id="quantity" value="2" />
-                      <span class="cart_increase"></span>
+                  <div class="items_wrapper">
+                    <div class="order_item">
+                      <div class="order_img"></div>
+                      <p class="order_name">Lorem ipsum dolor sit amet</p>
+                      <div class="cart_ammount">
+                        <span class="cart_decrease" id="cart_decrease"></span>
+                        <input type="number" id="quantity" value="2" />
+                        <span class="cart_increase" id="cart_increase"></span>
+                      </div>
+                      <div class="cart_price">
+                        <span id="price">196</span> зл
+                      </div>
+                      <div class="order_delete">
+                        <img src="assets/images/delete.svg" alt="Delete" />
+                      </div>
                     </div>
-                    <div class="order_delete">
-                      <img src="assets/images/delete.svg" alt="Delete" />
-                    </div>
-                    <div class="cart_price"><span id="price">196</span> зл</div>
-                  </div>
 
-                  <div class="order_item">
-                    <div class="order_img"></div>
-                    <p class="order_name">Lorem ipsum dolor sit amet</p>
-                    <div class="cart_ammount">
-                      <span class="cart_decrease"></span>
-                      <input type="number" id="quantity2" value="1" />
-                      <span class="cart_increase"></span>
-                    </div>
-                    <div class="order_delete">
-                      <img src="assets/images/delete.svg" alt="Delete" />
-                    </div>
-                    <div class="cart_price">
-                      <span id="price2">198</span> зл
+                    <div class="order_item">
+                      <div class="order_img"></div>
+                      <p class="order_name">Lorem ipsum dolor sit amet</p>
+                      <div class="cart_ammount">
+                        <span class="cart_decrease" id="cart_decrease2"></span>
+                        <input type="number" id="quantity2" value="1" />
+                        <span class="cart_increase" id="cart_increase2"></span>
+                      </div>
+                      <div class="cart_price">
+                        <span id="price2">198</span> зл
+                      </div>
+                      <div class="order_delete">
+                        <img src="assets/images/delete.svg" alt="Delete" />
+                      </div>
                     </div>
                   </div>
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="order_promo">
                   <div class="order_promocode">
-                    <input type="text" name="promocode" id="promocode" />
-                    <button type="button">Застосувати</button>
+                    <input
+                      type="text"
+                      name="promocode"
+                      id="promocode"
+                      placeholder="Промокод"
+                    />
+                    <input type="button" value="Застосувати" />
                   </div>
                 </fieldset>
 
-                <fieldset>
-                  <p>Доставка <span>Безкоштовно</span></p>
-                  <p>До оплати <span>262 зл</span></p>
+                <fieldset class="order_total">
+                  <p class="order_ride">Доставка <span>Безкоштовно</span></p>
+                  <p class="order_totalPrice">До оплати <span>262 зл</span></p>
                 </fieldset>
 
-                <button type="submit">Zamawiam</button>
-                <small
-                  >Składając zamówienie, zgadzasz się z naszą
-                  <a
-                    href="https://drive.google.com/file/d/1CUFmKqSA1yER6gqrCYpOGOK_keBnuU3b/view"
-                    target="_blank"
-                    >polityką prywatnościdanych</a
+                <fieldset class="order_submit">
+                  <input type="submit" value="Zamawiam" />
+                  <br />
+                  <small
+                    >Składając zamówienie, zgadzasz się z naszą <br />
+                    <a
+                      href="https://drive.google.com/file/d/1CUFmKqSA1yER6gqrCYpOGOK_keBnuU3b/view"
+                      target="_blank"
+                      >polityką prywatnościdanych</a
+                    >
+                    osobowych i warunkami dostawy.</small
                   >
-                  osobowych i warunkami dostawy.</small
-                >
+                </fieldset>
               </div>
             </form>
           </div>

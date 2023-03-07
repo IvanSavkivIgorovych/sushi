@@ -80,6 +80,7 @@
   &_left,
   &_right {
     flex: 1;
+    width: calc(50% - 12px);
   }
 
   &_left fieldset:not(:last-child) {
@@ -229,7 +230,7 @@
     gap: 24px 32px;
     padding: 0 20px;
 
-    input:not([type="date"]) {
+    input[type="checkbox"] {
       @include reset_input_radio();
 
       &:checked + label::after {
@@ -342,7 +343,217 @@
   }
 
   &_preorder {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 24px;
     margin-left: -20px;
+  }
+
+  &_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .cart_ammount {
+      display: flex;
+    }
+
+    .cart_ammount #quantity,
+    .cart_ammount #quantity2 {
+      width: 40px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      font-size: 20px;
+      line-height: 24px;
+      color: #d6cfca;
+      text-align: center;
+    }
+
+    .cart_decrease {
+      width: 30px;
+      height: 30px;
+      background: url(../../assets/images/leftArrow.svg) center center no-repeat;
+      cursor: pointer;
+    }
+
+    .cart_increase {
+      width: 30px;
+      height: 30px;
+      background: url(../../assets/images/rightArrow.svg) center center
+        no-repeat;
+      cursor: pointer;
+    }
+
+    input {
+      min-height: initial;
+      min-width: initial;
+      padding: 0;
+      background: initial;
+      border-radius: none;
+    }
+
+    input[type="number"] {
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      &::-moz-number-spin-up,
+      &::-moz-number-spin-down {
+        display: none;
+      }
+
+      &::-ms-clear,
+      &::-ms-reveal {
+        display: none;
+      }
+    }
+
+    .cart_price {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+
+  &_img {
+    width: 70px;
+    height: 70px;
+    background: url(../../assets/images/product_item.png) center center
+      no-repeat;
+    background-size: contain;
+  }
+
+  &_delete {
+    cursor: pointer;
+  }
+
+  .items_wrapper {
+    background: #27292d;
+    border-radius: 10px;
+    padding-right: 30px;
+  }
+
+  &_promocode {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(255, 227, 224, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+
+    input {
+      min-width: 255px;
+      min-height: 40px;
+      padding: 10px;
+
+      &:focus {
+        border: 1px solid rgba(255, 227, 224, 0.2);
+      }
+
+      &::placeholder {
+        font-family: "Gothic A1";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #d6cfca;
+        opacity: 0.5;
+      }
+    }
+
+    input[type="button"] {
+      min-width: 255px;
+      min-height: 40px;
+      border: 1px solid #ff9b74;
+      border-radius: 10px;
+      font-family: "Gothic A1";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: #ff9b74;
+      cursor: pointer;
+      transition: all ease-in-out 0.2s;
+
+      &:hover {
+        background: #ff9b74;
+        color: #fff7f1;
+      }
+    }
+  }
+
+  &_list {
+    margin-bottom: 24px;
+  }
+
+  &_promo {
+    margin-bottom: 50px;
+  }
+
+  &_total {
+    font-family: "Gothic A1";
+    margin-bottom: 47px;
+  }
+
+  &_ride,
+  &_totalPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(255, 227, 224, 0.2);
+  }
+
+  &_ride {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 24px;
+  }
+
+  &_totalPrice {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    padding: 10px;
+  }
+
+  &_submit {
+    text-align: center;
+
+    input[type="submit"] {
+      min-width: 360px;
+      min-height: 49px;
+      border: 1px solid #ff9b74;
+      border-radius: 10px;
+      font-family: "Gothic A1";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: #ff9b74;
+      margin-bottom: 11px;
+      transition: all ease-in-out 0.2s;
+
+      &:hover {
+        background: #ff9b74;
+        color: #fff7f1;
+      }
+    }
+
+    small {
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    a {
+      color: #ff9b74;
+    }
   }
 }
 
