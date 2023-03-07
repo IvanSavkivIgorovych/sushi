@@ -697,7 +697,7 @@ table {
 .order_submit {
   text-align: center;
 }
-.order_submit input[type=submit] {
+.order_submit button[type=submit] {
   min-width: 360px;
   min-height: 49px;
   border: 1px solid #ff9b74;
@@ -709,9 +709,10 @@ table {
   line-height: 20px;
   color: #ff9b74;
   margin-bottom: 11px;
+  background: #27292d;
   transition: all ease-in-out 0.2s;
 }
-.order_submit input[type=submit]:hover {
+.order_submit button[type=submit]:hover {
   background: #ff9b74;
   color: #fff7f1;
 }
