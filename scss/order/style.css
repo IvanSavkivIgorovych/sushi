@@ -255,7 +255,7 @@ table {
   flex: 1;
 }
 .order_left fieldset:not(:last-child) {
-  margin-bottom: 24px;
+  margin-bottom: 34px;
 }
 .order legend {
   font-weight: 500;
@@ -369,9 +369,179 @@ table {
 .order_addressType label:hover::before {
   border: 1px solid rgba(255, 227, 224, 0.2);
 }
+.order_type {
+  display: flex;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  padding: 10px;
+  border: 1px solid rgba(255, 227, 224, 0.2);
+  border-radius: 10px;
+  font-family: "Gothic A1";
+  font-weight: 500;
+  line-height: 20px;
+  color: rgba(255, 227, 224, 0.2);
+}
+.order_type input + label {
+  min-width: 255px;
+  min-height: 40px;
+  padding: 10px;
+  background: #27292d;
+  border-radius: 10px;
+  text-align: center;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+}
+.order_type input[type=radio] {
+  margin: 0;
+  display: none;
+}
+.order_type input[type=radio]:checked + label {
+  background: #ff9b74;
+  color: #fff7f1;
+}
+.order_type input[type=radio] + label:hover {
+  opacity: 0.8;
+}
+.order_time {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px 32px;
+  padding: 0 20px;
+}
+.order_time input:not([type=date]) {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+.order_time input:not([type=date]):checked + label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  background: url(../../assets/images/check.png) center center no-repeat;
+}
+.order_time label {
+  position: relative;
+  cursor: pointer;
+}
+.order_time label:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: #27292d;
+  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 20px;
+  border: 1px solid transparent;
+}
+.order_time label:hover::before {
+  border: 1px solid rgba(255, 227, 224, 0.2);
+}
+.order_time label:nth-last-of-type(-n + 2) {
+  width: 100%;
+}
+.order break {
+  flex-basis: 100%;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+.order_comment textarea {
+  resize: none;
+  width: 100%;
+  min-height: 166px;
+  padding: 10px;
+  background: #27292d;
+  border-radius: 10px;
+  border: none;
+  border: 1px solid transparent;
+  color: #d6cfca;
+  outline: none;
+}
+.order_comment textarea:focus {
+  border: 1px solid rgba(255, 227, 224, 0.2);
+}
+.order_comment textarea::-moz-placeholder {
+  font-family: "Gothic A1";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 227, 224, 0.2);
+}
+.order_comment textarea::placeholder {
+  font-family: "Gothic A1";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 227, 224, 0.2);
+}
+.order .datepicker-toggle {
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-height: 59px;
+  min-width: 264px;
+  padding: 10px 15px;
+  background: #27292d;
+  border-radius: 10px;
+  border: none;
+  border: 1px solid transparent;
+  color: rgba(255, 227, 224, 0.2);
+  outline: none;
+  transition: opacity ease-in-out 0.2s;
+  font-family: "Gothic A1";
+}
+.order .datepicker-toggle:hover {
+  opacity: 0.8;
+}
+.order .datepicker-toggle-button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 10px;
+  height: 17px;
+  background: url("../../assets/images/breadcrumb.svg") center right no-repeat;
+  transform: rotate(90deg) translate(-50%, 50%);
+}
+.order .datepicker-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.order .datepicker-input::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.order_preorder {
+  margin-left: -20px;
+}
 
 #gotop {
-  transition: all 1s ease-in-out;
+  transition: margin-top ease-in-out 1s;
 }
 
 .footer {

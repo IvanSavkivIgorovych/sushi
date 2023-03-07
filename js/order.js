@@ -19,3 +19,18 @@ radio2.addEventListener("click", function () {
     goTop.style.marginTop = -widthHide + "px";
   }
 });
+
+const input = document.createElement("input");
+input.type = "date";
+input.value = "invalid date value";
+const isSupported = input.value !== "invalid date value";
+
+const textInput = document.querySelector(".text_input");
+const dateInput = document.querySelector(".datepicker-input");
+const date = document.querySelector("#date");
+
+dateInput.addEventListener("change", (event) => {
+  textInput.value = event.target.value;
+  date.innerHTML = event.target.value;
+  event.target.value = "";
+});

@@ -164,7 +164,7 @@
                   <legend>Sposób opłaty:</legend>
 
                   <div class="order_type">
-                    <input type="radio" name="order_type" id="cash" />
+                    <input type="radio" name="order_type" id="cash" checked />
                     <label for="cash">Gotówka</label>
 
                     <input type="radio" name="order_type" id="card" />
@@ -175,33 +175,44 @@
                 <fieldset>
                   <legend>Інформація про час доставки:</legend>
 
-                  <input
-                    type="checkbox"
-                    name="delivery_asap"
-                    id="delivery_asap"
-                  />
-                  <label for="delivery_asap">Доставка якомога швидше</label>
+                  <div class="order_time">
+                    <input
+                      type="checkbox"
+                      name="delivery_asap"
+                      id="delivery_asap"
+                      checked
+                    />
+                    <label for="delivery_asap">Доставка якомога швидше</label>
 
-                  <input type="checkbox" name="pre_order" id="pre_order" />
-                  <label for="pre_order">Попереднє замовлення</label>
+                    <input type="checkbox" name="pre_order" id="pre_order" />
+                    <label for="pre_order">Попереднє замовлення</label>
+                    <div class="order_preorder">
+                      <span class="datepicker-toggle text_input">
+                        <span class="date" id="date">Дата</span>
+                        <span class="datepicker-toggle-button"></span>
+                        <input type="date" class="datepicker-input" />
+                      </span>
+                    </div>
 
-                  <input type="checkbox" name="call" id="call" />
-                  <label for="call"
-                    >Подзвонити мені для підтвердження замовлення</label
-                  >
+                    <break></break>
 
-                  <input type="checkbox" name="not_call" id="not_call" />
-                  <label for="not_call"
-                    >Не дзвонити мені для підтвердження замовлення</label
-                  >
+                    <input type="checkbox" name="call" id="call" />
+                    <label for="call"
+                      >Подзвонити мені для підтвердження замовлення</label
+                    >
+
+                    <break></break>
+
+                    <input type="checkbox" name="not_call" id="not_call" />
+                    <label for="not_call"
+                      >Не дзвонити мені для підтвердження замовлення</label
+                    >
+                  </div>
                 </fieldset>
 
-                <textarea
-                  name="comment"
-                  cols="30"
-                  rows="10"
-                  placeholder="Komentarz"
-                ></textarea>
+                <fieldset class="order_comment">
+                  <textarea name="comment" placeholder="Komentarz"></textarea>
+                </fieldset>
               </div>
 
               <div class="order_right">
