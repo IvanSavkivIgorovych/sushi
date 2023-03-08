@@ -276,7 +276,7 @@ table {
 }
 .order input {
   min-height: 59px;
-  min-width: 264px;
+  width: 45%;
   padding: 10px 15px;
   background: #27292d;
   border-radius: 10px;
@@ -313,7 +313,7 @@ table {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 24px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.09s ease-in-out;
   opacity: 1;
   visibility: visible;
 }
@@ -725,7 +725,7 @@ table {
 }
 
 #gotop {
-  transition: margin-top ease-in-out 1s;
+  transition: margin-top ease-in-out 0.1s;
 }
 
 .footer {
